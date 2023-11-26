@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ProductsPage } from './products.page';
+import { ProductsComponent } from './products.component';
 import { ProductsPageRoutingModule } from './products-routing.module';
 import { ProductsService } from '@/app/services';
 
@@ -15,7 +15,7 @@ import { ProductsService } from '@/app/services';
     IonicModule,
     ProductsPageRoutingModule
   ],
-  declarations: [ProductsPage],
+  declarations: [ProductsComponent],
   providers: [ProductsService]
 })
 export class ProductsPageModule {}

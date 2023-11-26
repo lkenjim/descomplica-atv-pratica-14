@@ -1,14 +1,14 @@
-import { Product } from '@/app/models';
-import { ProductsService } from '@/app/services';
-import { Component } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { Product } from "@/app/models";
+import { ProductsService } from "@/app/services";
+import { Component } from "@angular/core";
+import { FormBuilder, FormGroup } from "@angular/forms";
 
 @Component({
-  selector: 'app-products',
-  templateUrl: 'products.page.html',
-  styleUrls: ['products.page.scss'],
+  selector: 'app-products-creation-page',
+  templateUrl: './products-creation-page.component.html',
+  styleUrls: ['./products-creation-page.component.scss']
 })
-export class ProductsPage {
+export class ProductsCreationPageComponent {
   form: FormGroup = this.formBuilder.group({
     name: [''],
     description: [''],
