@@ -1,5 +1,6 @@
-import { Product } from "@/app/models";
-import { Component, Input } from "@angular/core";
+import { Product } from '@/app/models';
+import { ProductsService } from '@/app/services';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-product',
@@ -9,7 +10,15 @@ import { Component, Input } from "@angular/core";
 export class ProductComponent {
   @Input() product: Product | null = null;
 
-  constructor() {
-    console.log(this.product)
+  constructor(private readonly productsService: ProductsService) {}
+
+  edit() {
+    if (!this.product) return;
+  }
+
+  delete() {
+    if (!this.product) return;
+
+    this.productsService.delete(this.product);
   }
 }

@@ -13,8 +13,16 @@
       </div>
 
       <div class="content-container__content__actions">
-        <ion-icon class="edit" name="create-outline"></ion-icon>
-        <ion-icon class="trash" name="trash-outline"></ion-icon>
+        <ion-icon
+          class="edit"
+          name="create-outline"
+        ></ion-icon>
+
+        <ion-icon
+          class="trash"
+          name="trash-outline"
+          (click)="delete()"
+        ></ion-icon>
       </div>
     </div>
   </div>

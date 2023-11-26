@@ -22,4 +22,11 @@ export class ProductsService {
       .set(product)
       .catch(err => console.log('Error while creating product', err));
   }
+
+  async delete(product: Product): Promise<void> {
+    await this.productsRef
+      .child(product.id)
+      .remove()
+      .catch(err => console.log('Error while deleting product', err));
+  }
 }

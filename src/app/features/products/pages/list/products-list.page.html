@@ -15,8 +15,10 @@
     <span *ngIf="!products.length">No products found</span>
 
     <ion-accordion-group>
-      <app-product [product]="product" *ngFor="let product of products">
-      </app-product>
+      <app-product
+        *ngFor="let product of products"
+        [product]="product"
+      ></app-product>
     </ion-accordion-group>
   </ng-template>
 </ion-content>
