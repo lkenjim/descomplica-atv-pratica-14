@@ -1,0 +1,21 @@
+<ion-accordion *ngIf="product" [value]="product.id">
+  <ion-item slot="header">
+    <ion-label>{{ product.name }}</ion-label>
+  </ion-item>
+
+  <div class="ion-padding content-container" slot="content">
+    <div class="content-container__content">
+      <div class="content-container__content__data">
+        <span>ID: {{ product.id}}</span>
+        <span>Name: {{ product.name}}</span>
+        <span>Description: {{ product.description}}</span>
+        <span>Price: {{ product.price }}</span>
+      </div>
+
+      <div class="content-container__content__actions">
+        <ion-icon class="edit" name="create-outline"></ion-icon>
+        <ion-icon class="trash" name="trash-outline"></ion-icon>
+      </div>
+    </div>
+  </div>
+</ion-accordion>

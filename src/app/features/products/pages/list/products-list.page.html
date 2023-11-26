@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Test</ion-title>
+    <ion-title>All products</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -14,8 +14,9 @@
   <ng-template #list>
     <span *ngIf="!products.length">No products found</span>
 
-    <div *ngFor="let product of products">
-      {{ product.name }}
-    </div>
+    <ion-accordion-group>
+      <app-product [product]="product" *ngFor="let product of products">
+      </app-product>
+    </ion-accordion-group>
   </ng-template>
 </ion-content>

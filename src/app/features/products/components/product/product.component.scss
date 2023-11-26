@@ -1,0 +1,43 @@
+.content-container {
+  background: rgb(54, 54, 54);
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    // padding: 0 40px 0 0;
+
+    &__data {
+      flex-grow: 2;
+
+      span {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+
+    &__actions {
+      flex-grow: 1;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+
+      ion-icon {
+        width: 25px;
+        height: 25px;
+        transition: color 280ms linear;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        &.edit:hover {
+          color: yellow;
+        }
+
+        &.trash:hover {
+          color: red;
+        }
+      }
+    }
+  }
+}

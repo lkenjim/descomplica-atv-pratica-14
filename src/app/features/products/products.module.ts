@@ -6,6 +6,7 @@ import { ProductsComponent } from './products.component';
 import { ProductsPageRoutingModule } from './products-routing.module';
 import { ProductsService } from '@/app/services';
 import { ProductsCreationPageComponent, ProductsListPageComponent } from './pages';
+import { ProductComponent } from './components';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ProductsCreationPageComponent, ProductsListPageComponent } from './page
   declarations: [
     ProductsComponent,
     ProductsCreationPageComponent,
-    ProductsListPageComponent
+    ProductsListPageComponent,
+    ProductComponent,
   ],
   providers: [ProductsService]
 })

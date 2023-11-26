@@ -1,5 +1,3 @@
-import { Product } from '@/app/models';
-import { ProductsService } from '@/app/services';
 import { Component } from '@angular/core';
 
 @Component({

@@ -24,5 +24,7 @@ export class ProductsListPageComponent {
 
     this.products = Object.values(products);
     this.loading = false;
+
+    console.log(this.products)
   }
 }
