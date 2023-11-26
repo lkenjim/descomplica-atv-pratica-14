@@ -17,10 +17,12 @@ export class ProductsListPageComponent {
   }
 
   getProducts(products: Record<string, Product>): void {
+    if (!products) {
+      this.loading = false;
+      return;
+    };
+
     this.products = Object.values(products);
     this.loading = false;
-
-    console.log(this.products);
-
   }
 }
