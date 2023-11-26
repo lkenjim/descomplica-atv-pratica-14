@@ -5,8 +5,8 @@ import { FormBuilder, FormGroup } from "@angular/forms";
 
 @Component({
   selector: 'app-products-creation-page',
-  templateUrl: './products-creation-page.component.html',
-  styleUrls: ['./products-creation-page.component.scss']
+  templateUrl: './products-creation.page.html',
+  styleUrls: ['./products-creation.page.scss']
 })
 export class ProductsCreationPageComponent {
   form: FormGroup = this.formBuilder.group({

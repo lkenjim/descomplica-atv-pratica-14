@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Test</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ng-component *ngIf="loading; then isLoading else list"></ng-component>
+
+  <ng-template #isLoading>
+    <span>Loading...</span>
+  </ng-template>
+
+  <ng-template #list>
+    <span *ngIf="!products.length">No products found</span>
+
+    <div *ngFor="let product of products">
+      {{ product.name }}
+    </div>
+  </ng-template>
+</ion-content>

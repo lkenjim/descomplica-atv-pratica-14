@@ -12,8 +12,8 @@ export class ProductsService {
     this.productsRef = this.db.database.ref(this.dbPath);
   }
 
-  findAll() {
-    return this.productsRef.on('value', a => console.log(a.val()));
+  findAll(callback = (_args: any) => {}) {
+    this.productsRef.on('value', v => callback(v.val()));
   }
 
   create(product: Product): Promise<void> {

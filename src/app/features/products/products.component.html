@@ -1,0 +1,25 @@
+<ion-split-pane when="xs" contentId="main">
+  <ion-menu contentId="main">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <ion-list>
+        <ion-item>
+          <a [routerLink]="['list']">List</a>
+        </ion-item>
+
+        <ion-item>
+          <a [routerLink]="['create']">Create</a>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <div id="main">
+    <router-outlet></router-outlet>
+  </div>
+</ion-split-pane>
