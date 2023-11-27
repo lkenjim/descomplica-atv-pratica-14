@@ -7,7 +7,6 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-products-creation-page',
   templateUrl: './products-creation.page.html',
-  styleUrls: ['./products-creation.page.scss']
 })
 export class ProductsCreationPageComponent {
   form: FormGroup = this.formBuilder.group({

@@ -6,7 +6,6 @@ import { FormBuilder, FormGroup } from "@angular/forms";
 @Component({
   selector: 'app-products-list-page',
   templateUrl: './products-list.page.html',
-  styleUrls: ['./products-list.page.scss']
 })
 export class ProductsListPageComponent {
   products: Product[] = [];
