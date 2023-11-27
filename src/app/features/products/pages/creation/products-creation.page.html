@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar class="ios hydrated">
     <ion-title class="ios title-ios hydrated">
-      Register new product
+      {{ productBeingEdited ? 'Edit' : 'Register new'}} product
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -11,17 +11,29 @@
     <form [formGroup]="form" (ngSubmit)="submit()">
       <ion-item>
         <ion-label position="floating">Name</ion-label>
-        <ion-input formControlName="name" type="text" required=""></ion-input>
+        <ion-input
+          formControlName="name"
+          type="text"
+          required
+        ></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label position="floating">Description</ion-label>
-        <ion-input formControlName="description" type="text" required=""></ion-input>
+        <ion-input
+          formControlName="description"
+          type="text"
+          required
+        ></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label position="floating">Price</ion-label>
-        <ion-input formControlName="price" type="text" required=""></ion-input>
+        <ion-input
+          formControlName="price"
+          type="text"
+          required
+        ></ion-input>
       </ion-item>
 
       <ion-row>

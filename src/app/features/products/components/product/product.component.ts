@@ -1,6 +1,7 @@
 import { Product } from '@/app/models';
 import { ProductsService } from '@/app/services';
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product',
@@ -10,10 +11,19 @@ import { Component, Input } from '@angular/core';
 export class ProductComponent {
   @Input() product: Product | null = null;
 
-  constructor(private readonly productsService: ProductsService) {}
+  constructor(
+    private readonly productsService: ProductsService,
+    private readonly router: Router
+  ) { }
 
   edit() {
     if (!this.product) return;
+
+    this.router.navigate(['products', 'create'], {
+      queryParams: {
+        productId: this.product.id
+      }
+    })
   }
 
   delete() {

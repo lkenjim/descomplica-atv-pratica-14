@@ -12,11 +12,11 @@ export class ProductsService {
     this.productsRef = this.db.database.ref(this.dbPath);
   }
 
-  findAll(callback = (_args: any) => {}) {
+  findAll(callback = (_args: Record<string, Product>) => {}) {
     this.productsRef.on('value', v => callback(v.val()));
   }
 
-  create(product: Product): Promise<void> {
+  async upsert(product: Product): Promise<void> {
     return this.productsRef
       .child(product.id)
       .set(product)
